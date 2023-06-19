@@ -34,8 +34,8 @@ const Home = (props) => {
     <>
       <div className="home-container">
         <Head>
-          <title>Character NFT template</title>
-          <meta property="og:title" content="Character NFT template" />
+          <title>Heartwork</title>
+          <meta property="og:title" content="Heartwork" />
         </Head>
         <header data-thq="thq-navbar" className="home-navbar">
           <span className="home-logo">Heartwork</span>

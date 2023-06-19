@@ -119,10 +119,10 @@ const Details = (props) => {
     <>
       <div className="details-container">
         <Head>
-          <title>details - Character NFT template</title>
+          <title>details - Heartwork</title>
           <meta
             property="og:title"
-            content="details - Character NFT template"
+            content="details - Heartwork"
           />
         </Head>
         <div className="details-hero">
