@@ -91,6 +91,7 @@ const Details = (props) => {
                   console.log("### data.method:", data.method);
                   if(String(data.method) == "ExtrinsicFailed") {
                     console.log("### Failure");
+                    alert(data.method);
                     flag = false;
                   } else {
                     console.log("### Success");
@@ -99,14 +100,9 @@ const Details = (props) => {
                 unsub();
 
                 if (flag) {
-                  alert("Success");
+                  alert("success. mint your NFT");
                 }
-              }
-            
-            // (result) => {
-            //     console.log("## result ", result);
-            //     alert(result);
-            // }
+              }            
             }
           );
       }
