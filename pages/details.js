@@ -38,8 +38,8 @@ const Details = (props) => {
     const storageDepositLimit = null;
     const getGasLimitForNotDeploy = ( api ) => {
       const gasLimit = api.registry.createType("WeightV2",{
-          refTime: new BN("10000000000"),
-          proofSize: new BN("10000000000"),
+          refTime: new BN("3951114240"),
+          proofSize: new BN("125952"),
       });
       return gasLimit;
     };
