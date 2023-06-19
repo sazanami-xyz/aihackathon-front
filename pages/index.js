@@ -1,10 +1,35 @@
-import React from 'react'
+// import React from 'react'
+import React, { useState } from "react";
 import Link from 'next/link'
 import Head from 'next/head'
+import { ApiPromise, WsProvider } from "@polkadot/api";
+import { InjectedAccountWithMeta } from "@polkadot/extension-inject/types";
 
 import Script from 'dangerous-html/react'
 
 const Home = (props) => {
+
+  const connectWallet = async () => {
+    console.log('ffff');
+    const blockchainUrl = "ws://127.0.0.1:9944";
+    const { web3Accounts, web3Enable} = await import(
+      "@polkadot/extension-dapp"
+    );
+    const extensions = await web3Enable("Polk4NET");
+    console.log("extensions:", extensions);
+    if (extensions.length === 0) {
+      return;
+    }
+    const accounts = await web3Accounts();
+    console.log("accounts :", accounts);
+    console.log("ggggg");
+    const wsProvider = new WsProvider(blockchainUrl);
+    const connectedApi = await ApiPromise.create({ provider: wsProvider } );
+    console.log("hhhh: ", connectedApi);
+
+  };
+
+
   return (
     <>
       <div className="home-container">
@@ -52,7 +77,7 @@ const Home = (props) => {
                 />
               </button>
             </div>
-            <button className="button">connect wallet</button>
+            <button className="button" onClick={connectWallet}>connect wallet</button>
           </div>
           <div data-thq="thq-burger-menu" className="home-burger-menu">
             <button className="button home-button5">
@@ -115,7 +140,7 @@ const Home = (props) => {
             </p>
           </div>
           <div className="home-buttons">
-            <button className="button">connetc wallet</button>
+            <button className="button" onClick={connectWallet}>connetc wallet</button>
           </div>
         </section>
         <section className="home-description">

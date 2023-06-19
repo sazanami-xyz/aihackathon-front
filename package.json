@@ -1,22 +1,29 @@
 {
-  "name": "character-nft-template",
-  "version": "1.0.0",
-  "description": "A next project generated based on a UIDL document",
-  "main": "index.js",
+  "name": "nextjs-nft",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "lint": "next lint"
   },
-  "author": "TeleportHQ",
-  "license": "MIT",
   "dependencies": {
-    "next": "^12.1.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "@polkadot/api": "^10.5.1",
+    "@polkadot/api-contract": "^10.5.1",
+    "@polkadot/extension-dapp": "^0.46.2",
+    "@polkadot/extension-inject": "^0.46.2",
     "dangerous-html": "0.1.13",
-    "prop-types": "15.7.2"
+    "next": "^12.1.0",
+    "prop-types": "15.7.2",
+    "react": "^17.0.2",
+    "react-dangerous-html": "^1.0.0",
+    "react-dom": "^17.0.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.12",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.6"
+  }
 }
