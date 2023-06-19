@@ -46,7 +46,7 @@ const Details = (props) => {
 
     console.log('sendMessage 2');
     console.log("api :", connectedApi);
-    console.log("actingAccount :", accounts[2]);
+    console.log("actingAccount :", accounts[0]);
     console.log("message :", props.message);
     console.log("id :", props.id);
 
@@ -54,7 +54,7 @@ const Details = (props) => {
     console.log("contract address :", contractAddress);
     const contract = new ContractPromise(connectedApi, abi, contractAddress);
     console.log("contract :", contract);
-    const performingAccount = accounts[2];
+    const performingAccount = accounts[0];
     console.log("performingAccount :", performingAccount);
     const injector = await web3FromSource(performingAccount.meta.source);
     const gasLimit = getGasLimitForNotDeploy(connectedApi);
