@@ -14,7 +14,7 @@ const Details = (props) => {
   const connectContract = async () => {
 
     console.log('ffff');
-    const blockchainUrl = "ws://127.0.0.1:9944";
+    const blockchainUrl = "wss://rpc.shibuya.astar.network";
     const { web3Accounts, web3Enable} = await import(
       "@polkadot/extension-dapp"
     );
