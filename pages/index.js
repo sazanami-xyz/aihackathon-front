@@ -140,7 +140,7 @@ const Home = (props) => {
             </p>
           </div>
           <div className="home-buttons">
-            <button className="button" onClick={connectWallet}>connetc wallet</button>
+            <button className="button" onClick={connectWallet}>connect wallet</button>
           </div>
         </section>
         <section className="home-description">
