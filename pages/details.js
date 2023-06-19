@@ -38,8 +38,8 @@ const Details = (props) => {
     const storageDepositLimit = null;
     const getGasLimitForNotDeploy = ( api ) => {
       const gasLimit = api.registry.createType("WeightV2",{
-          refTime: new BN("100000000000"),
-          proofSize: new BN("100000000000"),
+          refTime: new BN("10000000000"),
+          proofSize: new BN("10000000000"),
       });
       return gasLimit;
     };
@@ -91,7 +91,7 @@ const Details = (props) => {
                   console.log("### data.method:", data.method);
                   if(String(data.method) == "ExtrinsicFailed") {
                     console.log("### Failure");
-                    // alert(data.method);
+                    alert(data.method);
                     flag = false;
                   } else {
                     console.log("### Success");
@@ -100,9 +100,14 @@ const Details = (props) => {
                 unsub();
 
                 if (flag) {
-                  alert("success. mint your NFT");
+                  alert("Success");
                 }
-              }            
+              }
+            
+            // (result) => {
+            //     console.log("## result ", result);
+            //     alert(result);
+            // }
             }
           );
       }
