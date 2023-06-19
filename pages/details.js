@@ -73,7 +73,7 @@ const Details = (props) => {
       console.log('setMessage ', setMessage);
       console.log('sendMessage 4');
       if (injector !== undefined) {
-        console.log('sendMessage 5');
+        // console.log('sendMessage 5');
 
         const unsub = await setMessage.signAndSend(
             performingAccount.address,
