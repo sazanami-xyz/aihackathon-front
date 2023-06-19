@@ -30,10 +30,6 @@ const Details = (props) => {
     const connectedApi = await ApiPromise.create({ provider: wsProvider } );
     console.log("hhhh: ", connectedApi);
 
-
-
-
-
     console.log('sendMessage 1');
     const storageDepositLimit = null;
     const getGasLimitForNotDeploy = ( api ) => {
@@ -78,8 +74,7 @@ const Details = (props) => {
       console.log('sendMessage 4');
       if (injector !== undefined) {
         console.log('sendMessage 5');
-        // ここの処理でウォレットを表示して、パスワードを入力させないと
-        // 上のquery.flipの結果がチェーンに反映されない
+
         const unsub = await setMessage.signAndSend(
             performingAccount.address,
             { signer: injector.signer },
@@ -102,12 +97,7 @@ const Details = (props) => {
                 if (flag) {
                   alert("Success");
                 }
-              }
-            
-            // (result) => {
-            //     console.log("## result ", result);
-            //     alert(result);
-            // }
+              }            
             }
           );
       }
