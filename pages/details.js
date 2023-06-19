@@ -91,7 +91,7 @@ const Details = (props) => {
                   console.log("### data.method:", data.method);
                   if(String(data.method) == "ExtrinsicFailed") {
                     console.log("### Failure");
-                    alert(data.method);
+                    // alert(data.method);
                     flag = false;
                   } else {
                     console.log("### Success");
